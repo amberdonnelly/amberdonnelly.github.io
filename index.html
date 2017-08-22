@@ -11,16 +11,16 @@
   <style>
   body {
     font-size: 14pt;
-    color: #EBEDEF; /* blue grey */
+    color: #EBEDEF; /* very light grey */
   }
   h1 {
     font-size: 40pt;
   }
   a {
-    color: #D6EAF8; /* light grey */
+    color: #D6EAF8; /* light blue */
   }
   a:hover {
-    color: #E8DAEF; /* dark purple */
+    color: #E8DAEF; /* light purple */
     text-decoration: none;
   }
   .container-fluid {
@@ -30,23 +30,67 @@
     padding-right: 70px;
     text-align: center;
   }
+  .bot-margin { margin-bottom: 17px; }
   .bg1 {
     background-image: url("photos/gradient.jpeg");
     /*background-color: #43409D; /* dark purple */*/
   }
   </style>
+  <script language="javascript">
+    function hover(element) {
+      if (element.id == "linkedin"){
+        element.setAttribute('src', 'photos/Linkedin_g.png');
+      } else if (element.id == "github"){
+        element.setAttribute('src', 'photos/Github_g.png')
+      } else if (element.id == "instagram"){
+        element.setAttribute('src', 'photos/Instagram_g.png')
+      } else if (element.id == "youtube"){
+        element.setAttribute('src', 'photos/Youtube_g.png')
+      }
+    }
+    function unhover(element) {
+      if (element.id == "linkedin"){
+        element.setAttribute('src', 'photos/Linkedin.png');
+      } else if (element.id == "github"){
+        element.setAttribute('src', 'photos/Github.png')
+      } else if (element.id == "instagram"){
+        element.setAttribute('src', 'photos/Instagram.png')
+      } else if (element.id == "youtube"){
+        element.setAttribute('src', 'photos/Youtube.png')
+      }
+    }
+  </script>
 </head>
 <body>
 
-<!-- Title -->
+<!-- Header -->
 <div class="container-fluid bg1">
   <h1> Amber Donnelly </h1>
+  <div class="row bot-margin" style="padding: 0 40%;">
+    <div class="col-sm-3">
+      <img id="linkedin" src="photos/Linkedin.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" />
+    </div>
+    <div class="col-sm-3">
+      <img id="github" src="photos/Github.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" />
+    </div>
+    <div class="col-sm-3">
+      <img id="instagram" src="photos/Instagram.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" />
+    </div>
+    <div class="col-sm-3">
+      <img id="youtube" src="photos/Youtube.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" />
+    </div>
+  </div>
   <p align="center"> <a href="#">Student</a> | <a href="#">Creator</a> | <a href="#">Cinephile</a> </p>
 </div>
 
 <!-- Gallery -->
 <div class="container-fluid">
-  <img src = "Media/surface.PNG" class="img-responsive img-rounded" style="display:inline" width="700">
+  <img src = "photos/me.jpg" class="img-responsive img-rounded" style="display:inline" width="700">
+</div>
+
+<!-- Footer -->
+<div class="container-fluid">
+
 </div>
 
 </body>
