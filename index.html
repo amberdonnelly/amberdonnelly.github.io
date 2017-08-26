@@ -11,29 +11,77 @@
   <style>
   body {
     font-size: 14pt;
-    color: #EBEDEF; /* very light grey */
+    color: #34495E;
   }
   h1 {
     font-size: 40pt;
   }
+  h2 {
+    font-size: 24pt;
+  }
   a {
-    color: #D6EAF8; /* light blue */
+    color: darkblue;
   }
   a:hover {
     color: #E8DAEF; /* light purple */
     text-decoration: none;
   }
-  .container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
+  hr {
+    margin-top: 1px;
+    margin-bottom: 0px;
+  }
+  .container-fluid-center {
+    padding-top: 55px;
+    padding-bottom: 55px;
     padding-left: 70px;
     padding-right: 70px;
     text-align: center;
   }
+  .container-fluid-left {
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    text-align: left;
+  }
+  .top-margin { margin-top: 17px; }
   .bot-margin { margin-bottom: 17px; }
   .bg1 {
-    background-image: url("photos/gradient.jpeg");
-    /*background-color: #43409D; /* dark purple */*/
+    background-color: white;
+  }
+  .img-border {
+    border: 2px solid #424949
+  }
+  .container {
+    position: relative;
+  }
+  .image {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .hidden-text {
+    color: black;
+    font-size: 18pt;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  .container:hover .image {
+    opacity: 0.4;
+  }
+  .container:hover .hidden-text {
+    opacity: 1;
+  }
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
   }
   </style>
   <script language="javascript">
@@ -44,8 +92,8 @@
         element.setAttribute('src', 'photos/Github_g.png')
       } else if (element.id == "instagram"){
         element.setAttribute('src', 'photos/Instagram_g.png')
-      } else if (element.id == "youtube"){
-        element.setAttribute('src', 'photos/YouTube_g.png')
+      } else if (element.id == "email"){
+        element.setAttribute('src', 'photos/Email_g.png')
       }
     }
     function unhover(element) {
@@ -55,8 +103,8 @@
         element.setAttribute('src', 'photos/Github.png')
       } else if (element.id == "instagram"){
         element.setAttribute('src', 'photos/Instagram.png')
-      } else if (element.id == "youtube"){
-        element.setAttribute('src', 'photos/YouTube.png')
+      } else if (element.id == "email"){
+        element.setAttribute('src', 'photos/Email.png')
       }
     }
   </script>
@@ -67,33 +115,49 @@
 <body>
 
 <!-- Header -->
-<div class="container-fluid bg1">
-  <h1> Amber Donnelly </h1>
-  <div class="row bot-margin" style="padding: 0 43%;">
-    <div class="col-sm-4">
-      <a href="https://www.linkedin.com/in/amberdonnelly/"><img id="linkedin" src="photos/Linkedin.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
-    </div>
-    <div class="col-sm-4">
-      <a href="https://github.com/amberdonnelly"><img id="github" src="photos/Github.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
-    </div>
-    <div class="col-sm-4">
-      <a href="https://www.instagram.com/amberwdonnelly/"><img id="instagram" src="photos/Instagram.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
-    </div>
-    <!-- <div class="col-sm-3">
-      <img id="youtube" src="photos/YouTube.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" />
-    </div> -->
-  </div>
-  <p align="center"> <a href="#">ENPH Student</a> | <a href="#">Software Developer</a> | <a href="#">Liker of Things</a> </p>
+<div class="container-fluid-left bg1">
+  <!-- <h1> Amber Donnelly </h1> -->
+  <img src = "photos/name.png" class="img-responsive" style="display:inline" width="28%">
 </div>
 
-<!-- Gallery -->
-<div class="container-fluid">
-  <img src = "photos/me.jpg" class="img-responsive img-rounded" style="display:inline" width="700">
+<!-- About Me -->
+<div class="container-fluid-center bg1 bot-margin">
+  <div class="row">
+    <a href="#"><div class="col-sm-3 container">
+      <img src = "photos/stonehenge_v2.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
+      <p class="middle hidden-text">Download Resume</p>
+    </div></a>
+    <a href="#"><div class="col-sm-3 container">
+      <img src = "photos/engineers.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
+      <p class="middle hidden-text">Education and Involvement</p>
+    </div></a>
+    <a href="#"><div class="col-sm-3 container">
+      <img src = "photos/veronica.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
+      <p class="middle hidden-text">Technical Projects</p>
+    </div></a>
+    <a href="#"><div class="col-sm-3 container">
+      <img src = "photos/movies.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
+      <p class="middle hidden-text">Personal Interests</p>
+    </div></a>
+  </div>
 </div>
 
 <!-- Footer -->
-<div class="container-fluid">
-
+<div class="container-fluid-center bg1">
+  <div class="row" style="padding: 0 40%;">
+    <div class="col-sm-3">
+      <a href="https://www.linkedin.com/in/amberdonnelly/"><img id="linkedin" src="photos/Linkedin.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="https://github.com/amberdonnelly"><img id="github" src="photos/Github.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="https://www.instagram.com/amberwdonnelly/"><img id="instagram" src="photos/Instagram.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="mailto:amberwdonnelly@gmail.com"><img id="email" src="photos/Email.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+  </div>
 </div>
 
 </body>
