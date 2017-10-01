@@ -6,84 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/mysite.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  body {
-    font-size: 14pt;
-    color: #34495E;
-  }
-  h1 {
-    font-size: 40pt;
-  }
-  h2 {
-    font-size: 24pt;
-  }
-  a {
-    color: darkblue;
-  }
-  a:hover {
-    color: #E8DAEF; /* light purple */
-    text-decoration: none;
-  }
-  hr {
-    margin-top: 1px;
-    margin-bottom: 0px;
-  }
-  .container-fluid-center {
-    padding-top: 55px;
-    padding-bottom: 55px;
-    padding-left: 70px;
-    padding-right: 70px;
-    text-align: center;
-  }
-  .container-fluid-left {
-    padding-top: 70px;
-    padding-left: 70px;
-    padding-right: 70px;
-    text-align: left;
-  }
-  .top-margin { margin-top: 17px; }
-  .bot-margin { margin-bottom: 17px; }
-  .bg1 {
-    background-color: white;
-  }
-  .img-border {
-    border: 2px solid #424949
-  }
-  .container {
-    position: relative;
-  }
-  .image {
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  .hidden-text {
-    color: black;
-    font-size: 18pt;
-    opacity: 1;
-    display: block;
-    transition: .5s ease;
-    backface-visibility: hidden;
-  }
-  .container:hover .image {
-    opacity: 0.4;
-  }
-  .container:hover .hidden-text {
-    opacity: 1;
-  }
-  .middle {
-    transition: .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%)
-  }
-  </style>
+
   <script language="javascript">
     function hover(element) {
       if (element.id == "linkedin"){
@@ -121,21 +47,21 @@
 </div>
 
 <!-- About Me -->
-<div class="container-fluid-center bg1 bot-margin">
+<div class="container-fluid-center bg1">
   <div class="row">
-    <a href="#"><div class="col-sm-3 container">
+    <a href="#"><div class="col-sm-3 container bot-margin top-margin">
       <img src = "photos/stonehenge_v2.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
       <p class="middle hidden-text">Download Resume</p>
     </div></a>
-    <a href="#"><div class="col-sm-3 container">
+    <a href="pages/school.html"><div class="col-sm-3 container bot-margin top-margin">
       <img src = "photos/engineers.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
       <p class="middle hidden-text">Education and Involvement</p>
     </div></a>
-    <a href="#"><div class="col-sm-3 container">
+    <a href="pages/projects.html"><div class="col-sm-3 container bot-margin top-margin">
       <img src = "photos/veronica.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
       <p class="middle hidden-text">Technical Projects</p>
     </div></a>
-    <a href="#"><div class="col-sm-3 container">
+    <a href="pages/interests.html"><div class="col-sm-3 container bot-margin top-margin">
       <img src = "photos/movies.jpg" class="image img-responsive img-circle img-border" style="display:inline" width="80%">
       <p class="middle hidden-text">Personal Interests</p>
     </div></a>
@@ -143,8 +69,8 @@
 </div>
 
 <!-- Footer -->
-<div class="container-fluid-center bg1">
-  <div class="row" style="padding: 0 40%;">
+<div class="container-fluid-center bg1" bot-margin=0>
+  <div class="row" style="padding: 0 40%;" id="contactIcons" top-margin="0px">
     <div class="col-sm-3">
       <a href="https://www.linkedin.com/in/amberdonnelly/"><img id="linkedin" src="photos/Linkedin.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
     </div>
@@ -158,6 +84,15 @@
       <a href="mailto:amberwdonnelly@gmail.com"><img id="email" src="photos/Email.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
     </div>
   </div>
+</div>
+
+<!-- used when viewport too small -->
+<!-- <div id = "blocking-container">
+  <p>This website is best used on a large screen!</p>
+</div> -->
+
+<div class="footer">
+  <!--placeholder-->
 </div>
 
 </body>

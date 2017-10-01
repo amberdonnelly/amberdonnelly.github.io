@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Education and Involvement</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../css/mysite.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script language="javascript">
+
+    function hover(element) {
+      if (element.id == "linkedin"){
+        element.setAttribute('src', '../photos/Linkedin_g.png');
+      } else if (element.id == "github"){
+        element.setAttribute('src', '../photos/Github_g.png')
+      } else if (element.id == "instagram"){
+        element.setAttribute('src', '../photos/Instagram_g.png')
+      } else if (element.id == "email"){
+        element.setAttribute('src', '../photos/Email_g.png')
+      }
+    }
+    function unhover(element) {
+      if (element.id == "linkedin"){
+        element.setAttribute('src', '../photos/Linkedin.png');
+      } else if (element.id == "github"){
+        element.setAttribute('src', '../photos/Github.png')
+      } else if (element.id == "instagram"){
+        element.setAttribute('src', '../photos/Instagram.png')
+      } else if (element.id == "email"){
+        element.setAttribute('src', '../photos/Email.png')
+      }
+    }
+  </script>
+
+</head>
+
+<link rel="shortcut icon" href="../photos/lettera.png" />
+
+<body>
+
+<!-- Header -->
+<div class="container-fluid-left bg1">
+  <!-- <h1> Amber Donnelly </h1> -->
+  <a href="../index.html"><img src = "../photos/name.png" class="img-responsive" style="display:inline" width="28%"></a>
+</div>
+
+<!-- About Me -->
+<div class="container-fluid-center bg1">
+  <h1 class="bot-margin">Engineering Physics</h1>
+  <p style="padding: 0 30%; text-align: justify"> Engineering Physics is an accredited engineering degree program offered at the University of British Columbia. Often referred to as the most difficult program on campus,
+  students in Engineering Physics take a total of 177 credits over the course of their degree. Core courses are in Computer Engineering, Electrical Engineering,
+  Mechanical Engineering,  Physics, and Math. Alongside the core courses in my degree I have taken / am taking the following technical electives:</p>
+  <p>MATH 220 (Math Proofs)</p>
+  <p>CPSC 221 (Algorithms and Data Structures)</p>
+  <!-- <lu style="padding: 0 30%;">
+    <li>MATH 220 (Math Proofs)</li>
+    <li>CPSC 221 (Algorithms and Data Structures)</li>
+  </lu> -->
+  <p>Click <a href="http://www.engphys.ubc.ca/">here</a> to read more about Engineering Physics.</p>
+</div>
+
+<!-- Footer -->
+<div class="container-fluid-center bg1 fixedBottom" bot-margin=0>
+  <div class="row" style="padding: 0 40%;" id="contactIcons" top-margin="0px">
+    <div class="col-sm-3">
+      <a href="https://www.linkedin.com/in/amberdonnelly/"><img id="linkedin" src="../photos/Linkedin.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="https://github.com/amberdonnelly"><img id="github" src="../photos/Github.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="https://www.instagram.com/amberwdonnelly/"><img id="instagram" src="../photos/Instagram.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+    <div class="col-sm-3">
+      <a href="mailto:amberwdonnelly@gmail.com"><img id="email" src="../photos/Email.png" onmouseover="hover(this);" onmouseout="unhover(this);" class="img-responsive img-rounded" style="display:inline" width="40" /></a>
+    </div>
+  </div>
+</div>
+
+<!-- used when viewport too small -->
+<!-- <div id = "blocking-container">
+  <p>This website is best used on a large screen!</p>
+</div> -->
+
+<div class="footer">
+  <!--placeholder-->
+</div>
+
+</body>
+</html>
