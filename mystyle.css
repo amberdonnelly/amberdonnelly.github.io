@@ -1,0 +1,120 @@
+
+  .body {
+    margin:5px;
+    padding:0px;
+    background-color: white;
+    font-family: "Courier", monospace;
+    color: darkblue;
+  }
+
+  .h2 {
+    font-size: 34pt;
+  }
+
+  .a {
+    color: #27A9E1;
+    font-weight: bold;
+    font-family: "Courier", monospace;
+  }
+
+  .a:hover {
+    color: darkblue; /* light purple */
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .image {
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .hidden-text {
+    color: black;
+    font-size: 18pt;
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+
+  .container:hover .image {
+    opacity: 0.4;
+  }
+
+  .container:hover .hidden-text {
+    opacity: 1;
+  }
+
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+  }
+
+  .row, .col { overflow: hidden; position: absolute; }
+  .row { left:25px ; right:25px ; overflow: hidden;}
+  .col { top:0px ; bottom:0px ; overflow: hidden;}
+  .scroll-x { overflow-x: hidden; }
+  .scroll-y { overflow-y: auto; }
+  .header.row { height: 250px; top:0px ; }
+  .body.row { top: 140px; bottom: 50px; left: -30px; right: 30px; }
+  .footer.row { height: 50px; bottom:0px; }
+
+  .container-fluid-left {
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: left;
+  }
+
+  .bot-margin { margin-bottom: 35px; }
+  .top-margin { margin-top: 35px; }
+  .large-top-margin {margin-top: 70px; }
+  .no-margin {margin-top: 0px;}
+
+  .scrollbar {
+    margin-left: 30px;
+    float: left;
+    /*height: 300px;
+    width: 65px;*/
+    overflow-y: scroll;
+    margin-bottom: 25px;
+  }
+
+  .force-overflow {
+  	min-height: 450px;
+  }
+
+  #wrapper {
+  	text-align: center;
+  	width: 500px;
+  	margin: auto;
+  }
+
+/*Scrollbar style by: https://codepen.io/GhostRider/*/
+
+  #style-7::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  	background-color: #F5F5F5;
+  	border-radius: 10px;
+  }
+
+  #style-7::-webkit-scrollbar {
+  	width: 10px;
+  	background-color: #F5F5F5;
+  }
+
+  #style-7::-webkit-scrollbar-thumb {
+  	border-radius: 10px;
+  	background-image: -webkit-gradient(linear,
+  									   left bottom,
+  									   left top,
+  									   color-stop(0.44, rgb(122,153,217)),
+  									   color-stop(0.72, rgb(73,125,189)),
+  									   color-stop(0.86, rgb(28,58,148)));
+  }
