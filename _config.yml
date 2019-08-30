@@ -1,0 +1,28 @@
+# top level stuff you probably don't need to touch
+highlighter: rouge
+markdown: kramdown
+rdiscount:
+  extensions: [smart]
+permalink: /:title
+paginate: 5
+plugins: [jekyll-paginate]
+port: 3000
+safe: true
+
+
+# edit here to achieve your personal greatness
+url: http://amberdonnelly.github.io/
+baseurl: /
+title: Amber Donnelly
+author: Amber Donnelly
+description: Personal blog and resume
+avatar: myface.jpg
+email: amberwdonnelly@gmail.com
+github: amberdonnelly # username
+twitter: amberwdonnelly
+linkedin: amberdonnelly
+google_analytics: UA-146698925-1
+
+
+# needed for travis-ci build
+exclude: [vendor]
