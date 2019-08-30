@@ -12,7 +12,7 @@ safe: true
 
 # edit here to achieve your personal greatness
 url: http://amberdonnelly.github.io/
-baseurl: /
+baseurl:
 title: Amber Donnelly
 author: Amber Donnelly
 description: Personal blog and resume
