@@ -6,7 +6,9 @@
     {% if site.email %}
 	  <a href="mailto:{{ site.email}}"><i class="fa fa-envelope"></i></a>
     {% endif %}
-
+		{% if site.instagram %}
+	  <a href="http://instagram.com/{{ site.instagram }}"><i class="fa fa-instagram"></i></a>
+    {% endif %}
     {% if site.twitter %}
 	  <a href="http://twitter.com/{{ site.twitter }}"><i class="fa fa-twitter"></i></a>
     {% endif %}
